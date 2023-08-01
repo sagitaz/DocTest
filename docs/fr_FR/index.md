@@ -1,18 +1,75 @@
-# Plugin template
+# JeeMate pour Wear OS
+Votre application préférée est désormais disponible pour les montres sous wearOS.
+Quelques prérequis sont nécessaires pour son installation qui sera détaillée dans cette page.
 
-Ce "template de plugin" sert de base à la réalisation de plugins pour **Jeedom**.
+## Activer débogage ADB par wifi
 
-La documentation générale relative à la conception de plugin est consultable [ici](https://doc.jeedom.com/fr_FR/dev/).
+Connecter la montre au même réseau wifi que votre PC.
 
-Dans le détail :   
-* [Utilisation du template de plugin](https://doc.jeedom.com/fr_FR/dev/plugin_template) : Le template de plugin est une base de plugin pour Jeedom qui doit être adaptée avec l'id de votre plugin et à laquelle il suffit d'ajouter vos propres fonctions.
+Ouvrir les paramètres de la montre et aller dans **à propos de la montre** puis **infos logiciel**. Cliquez 7 fois sur la version du logiciel pour activer les options développeurs.
 
-* [Fichier info.json](https://doc.jeedom.com/fr_FR/dev/structure_info_json) : Intégré depuis la version 3.0 de Jeedom, le fichier **info.json** est obligatoire pour le bon fonctionnement des plugins et leur bon déploiement sur le Market Jeedom.
+Aller dans les **options développeurs** et **activer le débogage ADB** puis **déboguer via WI-FI**. Ici notez l'IP de votre montre, cela vous sera utile pour vous y connecter depuis un PC.
 
-* [Icône du plugin](https://doc.jeedom.com/fr_FR/dev/Icone_de_plugin) : Afin de pouvoir être publié sur le Market Jeedom, tout plugin doit disposer d’une icône. Attention à ne pas utiliser le même code couleur que les icônes des plugins Jeedom officiels.
+## Télécharger l'APK JeeMate WearOS
 
-* [Widget du plugin](https://doc.jeedom.com/fr_FR/dev/widget_plugin) : Présentation des différentes manières d'inclure des widgets personnalisés au plugin.
+le fichier est disponible ici : test
 
-* [Documentation du plugin](https://doc.jeedom.com/fr_FR/dev/documentation_plugin) : Présentation de la mise en place d'une documentation car un bon plugin n'est rien sans documentation adéquate.
+## Télécharger Wear OS tools for windows
 
-* [Publication du plugin](https://doc.jeedom.com/fr_FR/dev/publication_plugin) : Description des pré-requis indispensables à la publication du plugin.
+https://forum.xda-developers.com/t/closed-tool-all-in-one-tool-for-windows-wear-os-tools-v10.4506239/
+
+Le décompresser et placer le fichier APK jeemate dans ce dossier.
+
+## Installer JeeMate WearOS
+
+Ouvrir WearOs tools et indiquer l'ip de votre montre
+
+![wearos-tools-01.png](/tuto/wearos-tools-01.png)
+
+Choisir 1 pour installer une application
+
+![wearos-tools-02.png](/tuto/wearos-tools-02.png)
+
+De nouveau choisir 1 pour installer une application
+
+![wearos-tools-03.png](/tuto/wearos-tools-03.png)
+
+Une fenêtre s'ouvre avec la liste des APK disponibles, notez le numéro de celui de JeeMate et procéder à l'installation.
+
+Une fois l'installation réussie vous pouvez démarrer l'application sur la montre.
+
+## Premier lancement
+
+Au démarrage de l'application il faut faire un appairage auto, n'oubliez pas de créer un nouvel équipement dans le plugin.
+
+Dans le cas d'un appairage depuis un réseau différent, il faut entrer l'adresse du jeedom, pour faciliter la chose je vous conseille de passer par wearos tools et le clavier du pc sera opperationnel (copier/coller inclus).
+Sur le menu de wearOs Tool choisir l'option 9 (miroir)
+
+Ensuite sélectionnez le backup que vous avez créé pour votre montre (et passé en global).
+
+## Interface JeeMate Wear OS
+
+### Page d'accueil
+
+![jeematewearos-accueil.png](/tuto/jeematewearos-accueil.png =300x)
+1. notifications
+1. scénarios
+1. onglets
+1. pièces
+1. caméras
+1. reconnaissance vocale
+1. configuration
+
+Un swipe de bas vers le haut ouvre la page acceuil de l'onglet Home.
+![pageaccueil.png](/tuto/wearos/pageaccueil.png =300x)
+
+Un double clic sur l'icone home ouvre la page de sélection de la session.
+
+### Page configuration
+![jeematewearos-configs.png](/tuto/jeematewearos-configs.png =300x)
+
+Avec le bouton de droite sélectionner la sauvegarde à appliquer sur votre montre.
+![backup.png](/tuto/wearos/backup.png =300x)
+### Page notification
+
+![jeematewearos-notifs.png](/tuto/jeematewearos-notifs.png =300x)
